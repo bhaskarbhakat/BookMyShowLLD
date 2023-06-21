@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Seat {
+public class Seat extends BaseModel{
     private String name;
     private int row;
     private int col;

@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Ticket {
+public class Ticket extends BaseModel{
     private Show show;
     private List<ShowSeat> showSeats;
     private List<Payment> payments;

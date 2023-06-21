@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Screen {
+public class Screen extends BaseModel{
     private String name;
     private List<Seat> seats;
     private List<Show> shows;

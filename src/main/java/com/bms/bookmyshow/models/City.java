@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class City {
+public class City extends BaseModel {
     private String name;
     private List<Theatre> theatres;
     

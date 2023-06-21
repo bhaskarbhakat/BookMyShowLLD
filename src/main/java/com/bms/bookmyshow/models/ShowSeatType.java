@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ShowSeatType {
+public class ShowSeatType extends BaseModel{
     private Show show;
     private double price;
     private SeatType seatType;

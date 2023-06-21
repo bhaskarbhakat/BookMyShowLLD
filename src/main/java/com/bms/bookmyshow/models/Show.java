@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Show {
+public class Show extends BaseModel{
     private Screen screen;
     private Movie movie;
     private Date startTime;
