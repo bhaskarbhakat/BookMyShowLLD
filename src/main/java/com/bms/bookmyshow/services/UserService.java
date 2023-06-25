@@ -1,5 +1,7 @@
 package com.bms.bookmyshow.services;
 
+import java.util.List;
+import com.bms.bookmyshow.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +22,14 @@ public class UserService {
         userRepository.save(user);
 
         return user;
+    }
+
+    public User getUser(Long id){
+        return userRepository.findById(id)
+        .orElseThrow(() -> new NotFoundException("User not found with ID: " + id));
+    }
+
+    public List<User> getUsers(){
+        return userRepository.findAll();
     }
 }

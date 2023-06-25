@@ -26,12 +26,12 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public User getUser(@PathVariable Long id){
-        return null;
+    public User getUser(@PathVariable("id") Long id){
+        return userService.getUser(id);
     }
 
     @GetMapping("/users")
     public List<User> getUsers(){
-        return null;
+        return userService.getUsers();
     }
 }
