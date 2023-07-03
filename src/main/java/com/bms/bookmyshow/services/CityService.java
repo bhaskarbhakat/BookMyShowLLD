@@ -1,23 +1,28 @@
-// package com.bms.bookmyshow.services;
+package com.bms.bookmyshow.services;
 
-// import org.modelmapper.ModelMapper;
-// import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-// import com.bms.bookmyshow.dtos.CreateCityDto;
-// import com.bms.bookmyshow.models.City;
-// import com.bms.bookmyshow.repositories.interfaces.CityRepository;
+import com.bms.bookmyshow.dtos.CreateCityRequestDto;
+import com.bms.bookmyshow.models.City;
+import com.bms.bookmyshow.repositories.interfaces.CityRepository;
 
-// public class CityService {
+@Service
+public class CityService {
     
-//     @Autowired
-//     private CityRepository cityRepository;
+    @Autowired
+    private CityRepository cityRepository;
 
-//     @Autowired
-//     private ModelMapper modelMapper;
+    public CityService(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
+    }
 
-//     public City createCity(CreateCityDto request){
-//         City newCity = modelMapper.map(request, City.class);
-//         return cityRepository.save(newCity);
-//     }
+    public City createCity(CreateCityRequestDto request){
+        City city = new City();
+        city.setName(request.getName());
+        city.setState(request.getState());
+        city.setTheatres(request.getTheatres());
+        return cityRepository.save(city);
+    }
 
-// }
+}

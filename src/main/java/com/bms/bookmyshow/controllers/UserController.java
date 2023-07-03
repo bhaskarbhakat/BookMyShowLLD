@@ -16,7 +16,7 @@ import com.bms.bookmyshow.services.UserService;
 
 @RestController
 public class UserController {
-    
+
     @Autowired
     private UserService userService;
 

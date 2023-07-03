@@ -2,8 +2,8 @@ package com.bms.bookmyshow.repositories.interfaces;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.bms.bookmyshow.models.City;
+import com.bms.bookmyshow.models.Movie;
 
-public interface CityRepository extends JpaRepository<City, Long> {
-
+public interface MovieRepository extends JpaRepository<Movie, Long>{
+    
 }
